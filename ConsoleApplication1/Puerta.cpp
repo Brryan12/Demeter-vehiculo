@@ -57,7 +57,7 @@ void Puerta::cerrarVentana()
 bool Puerta::cambiarNivelPolarizado(int np)
 {
 	if(ventana!=NULL)
-	ventana->setNivPolarizado(np);
+	return ventana->setNivPolarizado(np);
 }
 
 std::string Puerta::toString()

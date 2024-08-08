@@ -34,10 +34,10 @@ void Vehiculo::abrirVentana()
 	puerta->abrirVentana();
 }
 
-void Vehiculo::cambiarPolarizado(int np)
+bool Vehiculo::cambiarPolarizado(int np)
 {
-	
-	puerta->cambiarNivelPolarizado(np);
+	if(puerta!=NULL)
+	return puerta->cambiarNivelPolarizado(np);
 }
 
 std::string Vehiculo::toString()

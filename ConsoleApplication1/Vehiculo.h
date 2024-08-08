@@ -15,7 +15,7 @@ public:
 	void abrirPuerta();
 	void cerrarVentana();
 	void abrirVentana();
-	void cambiarPolarizado(int np);
+	bool cambiarPolarizado(int np);
 	std::string toString();
 };
 
