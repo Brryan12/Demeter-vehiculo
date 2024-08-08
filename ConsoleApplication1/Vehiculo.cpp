@@ -36,6 +36,7 @@ void Vehiculo::abrirVentana()
 
 void Vehiculo::cambiarPolarizado(int np)
 {
+	
 	puerta->cambiarNivelPolarizado(np);
 }
 

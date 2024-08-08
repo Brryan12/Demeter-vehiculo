@@ -54,8 +54,9 @@ void Puerta::cerrarVentana()
 		ventana->cerrarVentana();
 }
 
-void Puerta::cambiarNivelPolarizado(int np)
+bool Puerta::cambiarNivelPolarizado(int np)
 {
+	if(ventana!=NULL)
 	ventana->setNivPolarizado(np);
 }
 

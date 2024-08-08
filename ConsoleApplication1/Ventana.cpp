@@ -23,9 +23,14 @@ int Ventana::getNivPolarizado()
 	return nivPolarizado;
 }
 
-void Ventana::setNivPolarizado(int nivPolarizado)
+bool Ventana::setNivPolarizado(int nivPolarizado)
 {
-	this->nivPolarizado = nivPolarizado;
+	if (nivPolarizado >= 0 && nivPolarizado <= 100) {
+		this->nivPolarizado = nivPolarizado;
+		return true;
+	}
+	else
+		return false
 }
 
 void Ventana::cerrarVentana()

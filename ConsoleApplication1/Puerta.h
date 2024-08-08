@@ -20,7 +20,7 @@ public:
 	void cerrarPuerta();
 	void abrirVentana();
 	void cerrarVentana();
-	void cambiarNivelPolarizado(int np);
+	bool cambiarNivelPolarizado(int np);
 	std::string toString();
 };
 
