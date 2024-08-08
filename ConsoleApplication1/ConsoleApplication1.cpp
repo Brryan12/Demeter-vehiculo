@@ -10,6 +10,8 @@ int main()
     std::cout << vehiculo1->toString()<<std::endl;
 
     delete vehiculo1;
+
+
     return 0;
 }
 
