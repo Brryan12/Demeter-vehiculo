@@ -30,7 +30,7 @@ bool Ventana::setNivPolarizado(int nivPolarizado)
 		return true;
 	}
 	else
-		return false
+		return false;
 }
 
 void Ventana::cerrarVentana()

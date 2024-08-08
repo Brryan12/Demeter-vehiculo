@@ -8,9 +8,11 @@ int main()
     Vehiculo* vehiculo1 = new Vehiculo("1254", puerta1, false);
 
     std::cout << vehiculo1->toString()<<std::endl;
-
-    vehiculo1->cambiarPolarizado(75);
+    vehiculo1->cambiarPolarizado(175);
+   
     std::cout << vehiculo1->toString();
+    if (vehiculo1->cambiarPolarizado(175) == false)
+        std::cerr << "No se logro el cambio del polarizado" << std::endl;
     delete vehiculo1;
 
 
