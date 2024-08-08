@@ -13,13 +13,14 @@ public:
 	Puerta(std::string codigo,bool estadoPuerta,Ventana *ventana);
 	virtual ~Puerta();
 	std::string getCodigo();
-	void setCodigo();
+	void setCodigo(int codigo);
 	bool getEstadoPuerta();
-	void setEstadoPuerta();
+	void setEstadoPuerta(bool estadoPuerta);
 	void abrirPuerta();
 	void cerrarPuerta();
 	void abrirVentana();
 	void cerrarVentana();
+	void cambiarNivelPolarizado(int np);
 	std::string toString();
 };
 

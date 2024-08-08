@@ -11,9 +11,9 @@ public:
 
 	virtual ~Ventana();
 	bool getEstadoVen();
-	void setEstadoVen();
+	void setEstadoVen(bool estadoVen);
 	int getNivPolarizado();
-	void setNivPolarizado();
+	void setNivPolarizado(int nivPolarizado);
 	void cerrarVentana();
 	void abrirVentana();
 	std::string toString();

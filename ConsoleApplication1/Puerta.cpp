@@ -15,7 +15,7 @@ std::string Puerta::getCodigo()
 	return codigo;
 }
 
-void Puerta::setCodigo()
+void Puerta::setCodigo(int codigo)
 {
 	this->codigo = codigo;
 }
@@ -25,7 +25,7 @@ bool Puerta::getEstadoPuerta()
 	return false;
 }
 
-void Puerta::setEstadoPuerta()
+void Puerta::setEstadoPuerta(bool estadoPuerta)
 {
 	this->estadoPuerta = estadoPuerta;
 }
@@ -52,6 +52,11 @@ void Puerta::cerrarVentana()
 {
 	if (ventana != NULL)
 		ventana->cerrarVentana();
+}
+
+void Puerta::cambiarNivelPolarizado(int np)
+{
+	ventana->setNivPolarizado(np);
 }
 
 std::string Puerta::toString()

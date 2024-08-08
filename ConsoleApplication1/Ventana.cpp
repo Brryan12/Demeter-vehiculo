@@ -13,7 +13,7 @@ bool Ventana::getEstadoVen()
 	return false;
 }
 
-void Ventana::setEstadoVen()
+void Ventana::setEstadoVen(bool estadoVen)
 {
 	this->estadoVen = estadoVen;
 }
@@ -23,7 +23,7 @@ int Ventana::getNivPolarizado()
 	return nivPolarizado;
 }
 
-void Ventana::setNivPolarizado()
+void Ventana::setNivPolarizado(int nivPolarizado)
 {
 	this->nivPolarizado = nivPolarizado;
 }

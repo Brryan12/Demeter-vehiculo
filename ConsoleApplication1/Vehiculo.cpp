@@ -34,6 +34,11 @@ void Vehiculo::abrirVentana()
 	puerta->abrirVentana();
 }
 
+void Vehiculo::cambiarPolarizado(int np)
+{
+	puerta->cambiarNivelPolarizado(np);
+}
+
 std::string Vehiculo::toString()
 {
 	std::stringstream s;
