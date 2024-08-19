@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Vehiculo.h"
+
 int main()
 {
     std::cout << "Vehiculo dinamico" << std::endl;
@@ -15,6 +16,7 @@ int main()
         std::cerr << "No se logro el cambio del polarizado" << std::endl;
     delete vehiculo1;
 
+    
 
     return 0;
 }
