@@ -13,6 +13,7 @@ public:
 	virtual ~Vehiculo();
 	void cerrarPuerta();
 	void abrirPuerta();
+	std::string getPlaca();
 	void cerrarVentana();
 	void abrirVentana();
 	bool cambiarPolarizado(int np);

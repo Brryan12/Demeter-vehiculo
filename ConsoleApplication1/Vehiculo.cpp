@@ -22,6 +22,11 @@ void Vehiculo::abrirPuerta()
 	puerta->abrirPuerta();
 }
 
+std::string Vehiculo::getPlaca()
+{
+	return placa;
+}
+
 void Vehiculo::cerrarVentana()
 {
 	if (puerta != NULL)

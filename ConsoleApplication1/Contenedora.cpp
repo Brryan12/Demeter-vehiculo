@@ -23,11 +23,46 @@ Contenedora::~Contenedora()
 
 bool Contenedora::ingresarVehiculo(Vehiculo& veh)
 {
-	if (cant < tam)
-	{
-		vec[cant++] = (Vehiculo*) & veh;
-		return true;
+	if (yaExistePlaca(veh.getPlaca())==false){
+		if (cant < tam){
+			vec[cant++] = (Vehiculo*) & veh;
+			return true;
+		}
+		else
+			return false;
 	}
 	else
 		return false;
 }
+
+bool Contenedora::yaExistePlaca(std::string placa)
+{
+	for (int i = 0; i < cant; i++){
+		if (vec[i] != NULL)
+			if (vec[i]->getPlaca() == placa)
+				return true;
+	}
+	return false;
+}
+std::string Contenedora::toString()
+{
+	std::stringstream s;
+	s << "----REPORTE DE VEHICULOS----" << std::endl;
+	for (int i = 0; i < cant; i++) {
+		if (vec[i] != NULL)
+			s << vec[i]->toString() << std::endl;
+	}
+	return s.str();
+}
+/*bool Contenedora::eliminarVehiculo(std::string placa) {
+	for (int i = 0; i < cant; i++) {
+		if (vec[i] != NULL)
+			if (vec[i]->getPlaca() == placa) {
+				delete vec[i];
+				vec[i] = NULL;
+				return true;
+			}
+	}
+	return false;
+}
+*/
