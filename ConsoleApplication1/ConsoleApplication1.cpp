@@ -1,5 +1,8 @@
 #include <iostream>
 #include "Contenedora.h"
+#include "Vehiculo.h"
+#include "Puerta.h"
+#include "Ventana.h"
 #include <Windows.h>
 
 int main()
@@ -21,7 +24,8 @@ int main()
   //Zona de identificadores
     int op,k,nivelPolarizado;
     std::string placa,codigoPuerta;
-    bool estadoBoolVehiculo,estadoBoolPuerta,estadoBoolVentana,estBool;
+	int estadoBoolVehiculo, estadoBoolPuerta, estadoBoolVentana;
+	bool estBool;
 	Ventana* venPtr = NULL;
 	Puerta* puePtr = NULL;
 	Vehiculo* vehPtr = NULL;
@@ -45,19 +49,19 @@ int main()
 			std::cout<<"Creacion de la ventana"<<std::endl;
 			std::cout << "Ingrese el nivel de polarizado de la ventana: "; std::cin >> nivelPolarizado;
 			std::cout << "Ingrese el estado de la ventana (1 para abierta, 0 para cerrada): "; std::cin >> estadoBoolVentana;
-			venPtr = new Ventana(estadoBoolVentana, nivelPolarizado);	
+			venPtr = new Ventana(estBool, nivelPolarizado);	
 			std::cout << "Creacion de la puerta" << std::endl;
-			std::cout << "Ingrese el estado de la puerta (1 para abierta, 0 para cerrada): "; std::cin >> estBool;
+			std::cout << "Ingrese el estado de la puerta (1 para abierta, 0 para cerrada): "; std::cin >> estadoBoolPuerta;
 			if (estadoBoolPuerta == 1) estBool = true;
 			else estBool = false;
 			std::cout << "Ingrese el codigo de la puerta: "; std::cin >> codigoPuerta;
-			puePtr = new Puerta(codigoVentana, estadoBoolPuerta, venPtr);
+			puePtr = new Puerta(codigoPuerta, estBool, venPtr);
 			std::cout << "Creacion del vehiculo" << std::endl;
 			std::cout << "Ingrese la placa del vehiculo: "; std::cin >> placa;
-			std::cout << "Ingrese el estado del vehiculo (1 para prendido, 0 para apagado): "; std::cin >> estBool;
+			std::cout << "Ingrese el estado del vehiculo (1 para prendido, 0 para apagado): "; std::cin >> estadoBoolVehiculo;
 			if (estadoBoolVehiculo == 1) estBool = true;
 			else estBool = false;
-			vehPtr = new Vehiculo(placa, puePtr, estadoBoolVehiculo);
+			vehPtr = new Vehiculo(placa, puePtr, estBool);
 			if (contPtr->ingresarVehiculo(*vehPtr) == false)
 				std::cerr << "No se logro ingresar el vehiculo" << std::endl;
 			else
@@ -65,6 +69,7 @@ int main()
 			break;
 		case 2:
 			std::cout << contPtr->toString();
+
 			break;
 		case 3:
 			std::cout << "Saliendo..." << std::endl;
@@ -74,6 +79,7 @@ int main()
 			break;
 		}
     } while (op != 3);
+
     return 0;
 }
 
