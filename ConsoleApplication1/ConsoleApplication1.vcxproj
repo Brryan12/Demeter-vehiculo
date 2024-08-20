@@ -128,11 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleApplication1.cpp" />
+    <ClCompile Include="Contenedora.cpp" />
     <ClCompile Include="Puerta.cpp" />
     <ClCompile Include="Vehiculo.cpp" />
     <ClCompile Include="Ventana.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Contenedora.h" />
     <ClInclude Include="Puerta.h" />
     <ClInclude Include="Vehiculo.h" />
     <ClInclude Include="Ventana.h" />

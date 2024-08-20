@@ -31,7 +31,7 @@ int main()
 	Vehiculo* vehPtr = NULL;
     //...
 	//Zona de analisis
-    std::cout << "Inggrese el tamaño del vector de vehiculos: "; std::cin >> k;
+    std::cout << "Inggrese el tamaï¿½o del vector de vehiculos: "; std::cin >> k;
 	Contenedora* contPtr = new Contenedora(k);
     Sleep(6000);
 	system("cls");
@@ -48,7 +48,11 @@ int main()
 		case 1:
 			std::cout<<"Creacion de la ventana"<<std::endl;
 			std::cout << "Ingrese el nivel de polarizado de la ventana: "; std::cin >> nivelPolarizado;
+			if(nivelPolarizado>100)
+				std::cerr<<""
 			std::cout << "Ingrese el estado de la ventana (1 para abierta, 0 para cerrada): "; std::cin >> estadoBoolVentana;
+			if (estadoBoolVentana == 1) estBool = true;
+			else estBool = false;
 			venPtr = new Ventana(estBool, nivelPolarizado);	
 			std::cout << "Creacion de la puerta" << std::endl;
 			std::cout << "Ingrese el estado de la puerta (1 para abierta, 0 para cerrada): "; std::cin >> estadoBoolPuerta;
@@ -69,7 +73,7 @@ int main()
 			break;
 		case 2:
 			std::cout << contPtr->toString();
-
+			system("pause");
 			break;
 		case 3:
 			std::cout << "Saliendo..." << std::endl;

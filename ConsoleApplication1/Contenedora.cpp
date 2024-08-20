@@ -21,11 +21,11 @@ Contenedora::~Contenedora()
 	delete[] vec;
 }
 
-bool Contenedora::ingresarVehiculo(Vehiculo* veh)
+bool Contenedora::ingresarVehiculo(Vehiculo& veh)
 {
 	if (yaExistePlaca(veh.getPlaca())==false){
 		if (cant < tam){
-			vec[cant++] = *veh;
+			vec[cant++] = &veh;
 			return true;
 		}
 		else
